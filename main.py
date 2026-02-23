@@ -167,7 +167,7 @@ def train_auto_model(X, y):
 # =========================
 @st.cache_data
 def load_census_data():
-    df = pd.read_csv("census.csv")
+    df = pd.read_csv("Census.csv")
     df.replace(" ?", np.nan, inplace=True)
     df.dropna(inplace=True)
     target = "income"
@@ -519,7 +519,7 @@ with tab2:
             st.download_button(
                 "⬇️ Télécharger ce résultat (CSV)",
                 data=df_to_csv_bytes(result_df),
-                file_name="prediction_census.csv",
+                file_name="prediction_Census.csv",
                 mime="text/csv"
             )
         else:
